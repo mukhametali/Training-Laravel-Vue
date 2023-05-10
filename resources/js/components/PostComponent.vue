@@ -2,6 +2,7 @@
     <div>
         <SinglePostComponent></SinglePostComponent>
         <div>Name: {{ name }}</div>
+        <div>Job: {{ vasyaJob }}</div>
         <button @click="sayHello">Hello</button>
         <button @click="sayHi">Hi</button>
     </div>
@@ -28,6 +29,12 @@ export default {
       },
       sayHi() {
           console.log('hi')
+      }
+    },
+
+    computed: {
+      vasyaJob() {
+          return this.name + ' working in KazNU'
       }
     },
 

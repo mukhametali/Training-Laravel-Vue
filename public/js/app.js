@@ -5330,6 +5330,11 @@ __webpack_require__.r(__webpack_exports__);
       console.log('hi');
     }
   },
+  computed: {
+    vasyaJob: function vasyaJob() {
+      return this.name + ' working in KazNU';
+    }
+  },
   components: {
     SinglePostComponent: _SinglePostComponent__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
@@ -5369,7 +5374,7 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", [_c("SinglePostComponent"), _vm._v(" "), _c("div", [_vm._v("Name: " + _vm._s(_vm.name))]), _vm._v(" "), _c("button", {
+  return _c("div", [_c("SinglePostComponent"), _vm._v(" "), _c("div", [_vm._v("Name: " + _vm._s(_vm.name))]), _vm._v(" "), _c("div", [_vm._v("Job: " + _vm._s(_vm.vasyaJob))]), _vm._v(" "), _c("button", {
     on: {
       click: _vm.sayHello
     }
