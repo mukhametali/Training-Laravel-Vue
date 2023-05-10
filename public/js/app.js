@@ -5319,14 +5319,16 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       name: 'Ali',
-      age: 20,
-      "boolean": false,
-      someNull: null,
-      arr: [],
-      someObj: {
-        personName: 'Asel'
-      }
+      age: 20
     };
+  },
+  methods: {
+    sayHello: function sayHello() {
+      console.log('hello');
+    },
+    sayHi: function sayHi() {
+      console.log('hi');
+    }
   },
   components: {
     SinglePostComponent: _SinglePostComponent__WEBPACK_IMPORTED_MODULE_0__["default"]
@@ -5367,7 +5369,15 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", [_c("SinglePostComponent"), _vm._v(" "), _c("div", [_vm._v("Name: " + _vm._s(_vm.someObj))])], 1);
+  return _c("div", [_c("SinglePostComponent"), _vm._v(" "), _c("div", [_vm._v("Name: " + _vm._s(_vm.name))]), _vm._v(" "), _c("button", {
+    on: {
+      click: _vm.sayHello
+    }
+  }, [_vm._v("Hello")]), _vm._v(" "), _c("button", {
+    on: {
+      click: _vm.sayHi
+    }
+  }, [_vm._v("Hi")])], 1);
 };
 var staticRenderFns = [];
 render._withStripped = true;
