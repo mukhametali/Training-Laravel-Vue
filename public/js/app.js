@@ -5321,7 +5321,7 @@ __webpack_require__.r(__webpack_exports__);
       persons: [{
         id: 1,
         name: 'Ali',
-        age: 27,
+        age: 20,
         job: 'developer'
       }, {
         id: 2,
@@ -5333,11 +5333,32 @@ __webpack_require__.r(__webpack_exports__);
         name: 'Adel',
         age: 25,
         job: 'administrator'
+      }, {
+        id: 4,
+        name: 'Anel',
+        age: 29,
+        job: 'administrator'
+      }, {
+        id: 5,
+        name: 'Aygul',
+        age: 19,
+        job: 'driver'
       }]
     };
   },
   methods: {},
-  computed: {},
+  computed: {
+    personsAgeMoreTwenty: function personsAgeMoreTwenty() {
+      return this.persons.filter(function (person) {
+        return person.age > 20;
+      });
+    },
+    personsAgeLessTwenty: function personsAgeLessTwenty() {
+      return this.persons.filter(function (person) {
+        return person.age < 20;
+      });
+    }
+  },
   components: {
     SinglePostComponent: _SinglePostComponent__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
@@ -5379,7 +5400,7 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", [_c("SinglePostComponent"), _vm._v(" "), _c("table", {
     staticClass: "table"
-  }, [_vm._m(0), _vm._v(" "), _c("tbody", _vm._l(_vm.persons, function (person) {
+  }, [_vm._m(0), _vm._v(" "), _c("tbody", _vm._l(_vm.personsAgeLessTwenty, function (person) {
     return _c("tr", [_c("th", {
       attrs: {
         scope: "row"

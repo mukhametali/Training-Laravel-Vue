@@ -11,7 +11,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr v-for="person in persons">
+                <tr v-for="person in personsAgeLessTwenty">
                     <th scope="row">{{ person.id }}</th>
                     <td>{{ person.name }}</td>
                     <td>{{ person.age }}</td>
@@ -35,7 +35,7 @@ export default {
                 {
                     id: 1,
                     name: 'Ali',
-                    age: 27,
+                    age: 20,
                     job: 'developer',
                 },
                 {
@@ -50,6 +50,19 @@ export default {
                     age: 25,
                     job: 'administrator',
                 },
+                {
+                    id: 4,
+                    name: 'Anel',
+                    age: 29,
+                    job: 'administrator',
+                },
+                {
+                    id: 5,
+                    name: 'Aygul',
+                    age: 19,
+                    job: 'driver',
+                },
+
             ]
 
         }
@@ -60,6 +73,16 @@ export default {
     },
 
     computed: {
+        personsAgeMoreTwenty() {
+            return this.persons.filter(function (person){
+                return person.age > 20
+            })
+        },
+        personsAgeLessTwenty() {
+            return this.persons.filter(function (person){
+                return person.age < 20
+            })
+        },
 
     },
 
