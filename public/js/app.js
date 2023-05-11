@@ -5318,23 +5318,26 @@ __webpack_require__.r(__webpack_exports__);
   name: "PostComponent",
   data: function data() {
     return {
-      name: 'Ali',
-      age: 20
+      persons: [{
+        id: 1,
+        name: 'Ali',
+        age: 27,
+        job: 'developer'
+      }, {
+        id: 2,
+        name: 'Asel',
+        age: 26,
+        job: 'teacher'
+      }, {
+        id: 3,
+        name: 'Adel',
+        age: 25,
+        job: 'administrator'
+      }]
     };
   },
-  methods: {
-    sayHello: function sayHello() {
-      console.log('hello');
-    },
-    sayHi: function sayHi() {
-      console.log('hi');
-    }
-  },
-  computed: {
-    vasyaJob: function vasyaJob() {
-      return this.name + ' working in KazNU';
-    }
-  },
+  methods: {},
+  computed: {},
   components: {
     SinglePostComponent: _SinglePostComponent__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
@@ -5374,17 +5377,37 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", [_c("SinglePostComponent"), _vm._v(" "), _c("div", [_vm._v("Name: " + _vm._s(_vm.name))]), _vm._v(" "), _c("div", [_vm._v("Job: " + _vm._s(_vm.vasyaJob))]), _vm._v(" "), _c("button", {
-    on: {
-      click: _vm.sayHello
-    }
-  }, [_vm._v("Hello")]), _vm._v(" "), _c("button", {
-    on: {
-      click: _vm.sayHi
-    }
-  }, [_vm._v("Hi")])], 1);
+  return _c("div", [_c("SinglePostComponent"), _vm._v(" "), _c("table", {
+    staticClass: "table"
+  }, [_vm._m(0), _vm._v(" "), _c("tbody", _vm._l(_vm.persons, function (person) {
+    return _c("tr", [_c("th", {
+      attrs: {
+        scope: "row"
+      }
+    }, [_vm._v(_vm._s(person.id))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(person.name))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(person.age))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(person.job))])]);
+  }), 0)])], 1);
 };
-var staticRenderFns = [];
+var staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("thead", [_c("tr", [_c("th", {
+    attrs: {
+      scope: "col"
+    }
+  }, [_vm._v("ID")]), _vm._v(" "), _c("th", {
+    attrs: {
+      scope: "col"
+    }
+  }, [_vm._v("Name")]), _vm._v(" "), _c("th", {
+    attrs: {
+      scope: "col"
+    }
+  }, [_vm._v("Age")]), _vm._v(" "), _c("th", {
+    attrs: {
+      scope: "col"
+    }
+  }, [_vm._v("Job")])])]);
+}];
 render._withStripped = true;
 
 
@@ -5405,7 +5428,7 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", [_vm._v("\n    Single Post Component 123\n")]);
+  return _c("div", [_vm._v("\n    Single Post\n")]);
 };
 var staticRenderFns = [];
 render._withStripped = true;

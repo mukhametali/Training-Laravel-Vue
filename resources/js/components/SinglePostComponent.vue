@@ -1,6 +1,6 @@
 <template>
     <div>
-        Single Post Component 123
+        Single Post
     </div>
 </template>
 
